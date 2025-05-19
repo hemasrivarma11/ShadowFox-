@@ -1,0 +1,98 @@
+body {
+  font-family:'Times New Roman', Times, serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  background-color: hsl(0, 92%, 5%);
+  color: #ebe9e9;
+}
+
+.controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+select, button {
+  padding: 8px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+
+  max-height: 80vh;       
+  overflow-y: auto;       
+  padding: 20px;
+  margin: 0 auto;
+}
+
+
+.product {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit:scale-down;
+  border-radius: 4px;
+}
+
+.product h3 {
+  margin: 10px 0 5px 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.cart-controls {
+  margin-top: 10px;
+}
+
+.cart-controls button {
+  padding: 4px 8px;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+#checkout-msg {
+  text-align: center;
+  color: #010901;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#cart {
+  text-align: right;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.checkout {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.checkout button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: hsl(332, 90%, 4%);
+  color:#ebe9e9
+}

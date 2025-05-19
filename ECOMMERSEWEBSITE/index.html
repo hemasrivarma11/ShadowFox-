@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Ekart WebSite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Ekart Shop</h1>
+
+  <div id="cart">🛒 Cart: <span id="cart-count">0</span> item(s)</div>
+
+  <div class="controls">
+    <label>Category:</label>
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="Accesorries">Accesorries</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Grocery">Grocery</option>
+    </select>
+
+    <label>Sort:</label>
+    <select id="sort">
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+
+    <button onclick="applyChanges()">Apply</button>
+  </div>
+
+  <div class="product-list" id="products"></div>
+
+  <div class="checkout">
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <p id="checkout-msg"></p>
+<footer>
+    © 2025 Mini Ekart Clone
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
