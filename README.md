@@ -1,1 +1,2 @@
 # ShadowFox-
+My internship at ShadowFox provided valuable hands-on experience in the field of web development. The internship at ShadowFox provided me with a solid foundation in web development. I not only improved my coding skills but also learned to handle real-world problems with practical solutions. It was a rewarding experience that enhanced my confidence and prepared me for more complex development projects in the future.
