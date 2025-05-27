@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Picker Saver</title>
+</head>
+<body>
+    <h1>Pick a Color</h1>
+    <input type="color" id="colorPicker">
+    <button onclick="saveColor()">Save Color</button>
+
+    <h2>Saved Colors:</h2>
+    <div id="colorList" style="display: flex; gap: 10px; flex-wrap: wrap;"></div>
+
+    <script>
+        async function saveColor() {
+            const color = document.getElementById('colorPicker').value;
+
+            const res = await fetch('/color', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ color })
+            });
+
+            const result = await res.json();
+            if (result.success) {
+                loadColors();
+            } else {
+                alert("Error saving color");
+            }
+        }
+
+        async function loadColors() {
+            const res = await fetch('/colors');
+            const colors = await res.json();
+
+            const container = document.getElementById('colorList');
+            container.innerHTML = '';
+
+            colors.forEach(c => {
+                const div = document.createElement('div');
+                div.style.background = c;
+                div.style.width = '50px';
+                div.style.height = '50px';
+                div.style.border = '1px solid black';
+                div.title = c;
+                container.appendChild(div);
+            });
+        }
+
+        // Initial load
+        loadColors();
+    </script>
+</body>
+</html>
